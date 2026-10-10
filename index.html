@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Arcade Sim — a tiny neon arcade game starter." />
+    <title>Arcade Sim</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">MIDNIGHT ARCADE / SIMULATION 01</p>
+          <h1>Arcade <span>Sim</span></h1>
+        </div>
+        <p class="status" id="status" role="status">INSERT COIN TO BEGIN</p>
+      </header>
+
+      <section class="arcade-layout" aria-label="Arcade simulation">
+        <aside class="scoreboard panel">
+          <p class="panel-label">CABINET READOUT</p>
+          <dl>
+            <div><dt>Score</dt><dd id="score">000000</dd></div>
+            <div><dt>Credits</dt><dd id="credits">03</dd></div>
+            <div><dt>Level</dt><dd id="level">01</dd></div>
+            <div><dt>Best</dt><dd id="best">000000</dd></div>
+          </dl>
+          <button class="start-button" id="startButton" type="button">Start game</button>
+          <p class="help-text">Move with <kbd>A</kbd><kbd>D</kbd> or <kbd>←</kbd><kbd>→</kbd>.<br />Pulse with <kbd>Space</kbd>.</p>
+        </aside>
+
+        <div class="cabinet panel">
+          <div class="screen-frame">
+            <canvas id="game" width="800" height="520" aria-label="Arcade game field"></canvas>
+            <div class="scanlines" aria-hidden="true"></div>
+          </div>
+          <div class="control-deck" aria-hidden="true">
+            <div class="joystick"><span></span></div>
+            <div class="deck-lights"><i></i><i></i><i></i><i></i></div>
+            <div class="buttons"><b></b><b></b></div>
+          </div>
+        </div>
+      </section>
+
+      <footer><span>ARCADE SIM // BUILD 001</span><span>GOOD LUCK, PLAYER</span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
